@@ -1,0 +1,326 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Zomato </title>
+
+    <!-- 
+        Clone of :
+        https://www.zomato.com/kolkata/delivery
+     -->
+
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+        }
+
+        .container {
+            width: 68rem;
+            margin: 0 auto;
+        }
+
+        #header .container {
+            padding: 0.5rem 0;
+            display: flex;
+        }
+
+        #header .container nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        #header .container div {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        #header .container > img {
+            height: 2rem;
+            margin: 1rem 4rem 1rem 0;
+        }
+
+        nav {
+            width: 100%;
+        }
+
+        nav > a {
+            font-size: 1.3rem;
+            font-weight: 100;
+            white-space: nowrap;
+            text-decoration: none;
+            color: rgb(142, 142, 142);
+            margin-left: 4rem;
+        }
+
+        nav .main {
+            width: 100%;
+            height: 3.8rem;
+            border: solid 1px rgb(225, 225, 225);
+            border-radius: 8px;
+            box-shadow: 0 1px 6px rgb(211, 211, 211);
+        }
+
+        nav .location {
+            width: 40%;
+            border-right: solid 2px rgb(211, 211, 211);
+            padding:  0 0.6rem;
+        }
+
+        nav .search {
+            width: 60%;
+            padding:  0 0.6rem;
+        }
+
+        nav .main img {
+            width: 1.4rem;
+            height: 1.4rem;
+        }
+
+        nav form {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            width: 100%;
+            margin: 0 0.6rem;
+        }
+
+        nav .location input:focus  {
+            /* border: 12px red solid; */
+            display: none;
+            background-color: red;
+            color: green;
+        }
+
+        nav input {
+            width: 100%;
+            font-size: 1rem;
+            border: none;
+        }
+
+        /* Section 2 - Category  */
+
+        #category {
+            border-bottom: 1px solid #e9e9e9;
+        }
+
+        #category .items {
+            display: flex;
+            /* justify-content: left; */
+        }
+
+        #category .item {
+            padding: 1.5rem 2rem 1rem;
+            display: flex;
+            align-items: center;
+        }
+        
+        #category .item .logo {
+            /* text-align: center; */
+            background-color: #FCEEC0;
+            border-radius: 50%;
+            padding: 1rem;
+            margin-right: 0.6rem;
+        }
+
+        #category .item img {
+            height: 2rem;
+            margin: auto;
+        }
+
+        #category .item p {
+            font-size: 1.5rem;
+            font-weight: 600;
+            color: #EF5363;
+        }
+
+        /* Section 4 - Food items */
+
+        #food-items {
+            background-color: #F8F8F8;
+        }
+
+        .food-items-main {
+            padding: 3rem 0;
+        }
+
+        .food-items-main h3 {
+            font-size: 1.8rem;
+            font-weight: 500;
+            margin-bottom: 2rem;
+            display: block;
+        }
+
+        .foods {
+            display: flex;
+            justify-content: space-between;
+            gap: 2rem;
+        }
+
+        .food {
+            text-align: center;
+        }
+
+        .food img {
+            width: 10rem;
+            margin-bottom: 1rem;
+            border-radius: 50%;
+        }
+
+        .food p {
+            font-size: 1.2rem;
+        }
+
+        /* Section 5 - Brand names */
+
+        #brands .food p.time {
+            font-size: 1rem;
+            color: rgb(62, 62, 62);
+            margin-top: 0.8rem;
+        }
+
+    </style>
+
+</head>
+<body>
+    <!-- Header -->
+    <section id="header">
+        <div class="container">
+            <img src="./assests/logo.avif" alt="">
+            <nav>
+                <div class="main">
+                    <div class="location">
+                        <img src="./assests/location-icon.png">
+                        <form action="">
+                            <input type="text" placeholder="Kolkata">
+                        </form>
+                        <img src="./assests/downarrow-icon.png">
+                    </div>
+                    <div class="search">
+                        <img src="./assests/search-icon.png">
+                        <form action="">
+                            <input type="text" placeholder="Search for resturant, cuisine or a dish">
+                        </form>
+                    </div>
+                </div>
+                <a href="#"> Log in </a>
+                <a href="#"> Sign up </a>
+            </nav>
+        </div>
+    </section>
+
+<!-- Section 2 - Category -->
+
+    <section id="category">
+        <div class="container">
+            <div class="items">
+                <div class="item">
+                    <div class="logo">
+                        <img src="./assests/scooty-icon.avif">
+                    </div>
+                    <p> Delivery </p>
+                </div>
+
+                <div class="item">
+                    <div class="logo">
+                        <img src="./assests/plate-icon.avif">
+                    </div>
+                    <p> Delivery </p>
+                </div>
+
+                <div class="item">
+                    <div class="logo">
+                        <img src="./assests/bottle-icon.webp">
+                    </div>
+                    <p> Delivery </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section 4 - Food items -->
+
+    <section id="food-items">
+        <div class="food-items-main container">
+            <h3>
+                Inspiration for your first order
+            </h3>
+            <div class="foods">
+                <div class="food">
+                    <img src="./assests/food1.avif">
+                    <p> Biryani </p>
+                </div>
+                <div class="food">
+                    <img src="./assests/food2.avif">
+                    <p> Pizza </p>
+                </div>
+                <div class="food">
+                    <img src="./assests/food3.avif">
+                    <p> Rolls </p>
+                </div>
+                <div class="food">
+                    <img src="./assests/food4.webp">
+                    <p> Chicken </p>
+                </div>
+                <div class="food">
+                    <img src="./assests/food5.avif">
+                    <p> Cake </p>
+                </div>
+                <div class="food">
+                    <img src="./assests/food6.avif">
+                    <p> Burger </p>
+                </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section 5 - Brand names -->
+
+    <section id="brands">
+        <div class="food-items-main container">
+            <h3>
+                Top brands for you
+            </h3>
+            <div class="foods">
+                <div class="food">
+                    <img src="./assests/brand1.avif">
+                    <p> KFC </p>
+                    <p class="time"> 29 min </p>
+                </div>
+                <div class="food">
+                    <img src="./assests/brand2.avif">
+                    <p> Chowman </p>
+                    <p class="time"> 27 min </p>
+                </div>
+                <div class="food">
+                    <img src="./assests/brand3.avif">
+                    <p> Arsalan </p>
+                    <p class="time"> 37 min </p>
+                </div>
+                <div class="food">
+                    <img src="./assests/brand4.avif">
+                    <p> WOW! Momo </p>
+                    <p class="time"> 30 min </p>
+                </div>
+                <div class="food">
+                    <img src="./assests/brand5.avif">
+                    <p> Dominos </p>
+                    <p class="time"> 30 min </p>
+                </div>
+                <div class="food">
+                    <img src="./assests/brand6.avif">
+                    <p> Pizza Hut </p>
+                    <p class="time"> 35 min </p>
+                </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+</body>
+</html>

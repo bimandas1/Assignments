@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title> CSS-2 (2) </title>
+
+    <style>
+        #container {
+            width: 60rem;
+            margin: auto;
+        }
+
+        #layer1 {
+            height: 9rem;
+            background-color: #FF4DA6;
+            margin-bottom: 0.8rem;
+        }
+
+        #layer2 {
+            height: 24rem;
+            display: flex;
+        }
+
+        #layer2 div {
+            height: 100%;
+        }
+
+        #layer2 #left {
+            width: 65%;
+            background-color: #FF037E;
+            margin-right: 0.8rem;
+        }
+
+        #layer2 #right {
+            /* width: 35%; */
+            width: calc(35% - 0.8rem);
+            background-color: #CE0468;
+        }
+
+        #layer3 {
+            height: 9rem;
+            background-color: #802755;
+            margin-top: 0.8rem;
+        }
+    </style>
+
+</head>
+<body>
+    <div id="container">
+        <div id="layer1"></div>
+        <div id="layer2">
+            <div id="left"> </div>
+            <div id="right"> </div>
+        </div>
+        <div id="layer3"></div>
+    </div>
+</body>
+</html>

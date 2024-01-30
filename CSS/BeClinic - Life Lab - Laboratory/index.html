@@ -1,0 +1,615 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- 
+        Clone of :
+        https://demo.templatemonster.com/demo/58654.html?_gl=1*11mavfw*_ga*MTQ1NDgxMDM1MC4xNzA1MzA5MTMz*_ga_FTPYEGT5LY*MTcwNTM4ODEyMS4zLjEuMTcwNTM4ODE1Ni4yNS4wLjA
+        -> Live Demo button of BeClinic - Life Lab - Laboratory
+    -->
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> BeClinic - Life Lab </title>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js" integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=PT+Sans&family=Poppins:wght@400;600;700&display=swap');
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+
+            font-family: 'Poppins', sans-serif;
+        }
+
+        p {
+            font-family: 'PT Sans', sans-serif;
+        }
+
+        a {
+            text-decoration: none;
+            color: black;
+        }
+
+        li {
+            list-style: none;
+        }
+
+        .container {
+            width: 74.5rem;
+            margin: auto;
+        }
+
+        .flex {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        :root {
+            --orange: #FF6A13;
+            --blue: #1797B1;
+            --grey: #9BB0B7;
+            --light-grey: #ebebeb;
+            --light-blue: #B9E0E8;
+            --dark-blue: #13353F;
+        }
+
+        /* First */
+
+        .first {
+            border-bottom: solid 1px var(--light-grey);
+        }
+
+        .first-main {
+            height: 5rem;
+        }
+
+        .first-main > div {
+            width: 25%;
+        }
+
+        .logo {
+            padding-top: 0.2rem;
+        }
+
+        .call {
+            /* flex-direction: column; */
+            text-align: left;
+        }
+
+        .call a {
+            font-size: 20px;
+            font-weight: 700;
+            display: inline-block;
+            margin: 0.8rem 0 0.4rem;
+        }
+
+        .call p {
+            display: inline;
+        }
+
+        .call a i {
+            color: var(--light-blue);
+            font-size: 1rem;
+            margin-right: 0.2rem;
+        }
+
+        .call a:hover p {
+            color: var(--orange);
+        }
+
+        .call > p {
+            font-weight: 100;
+            color: var(--grey);
+        }
+
+        .location a {
+            width: 100%;
+            text-align: center;
+            font-style: 14px;
+            font-weight: 600;
+            color: var(--blue);
+        }
+
+        .location i:first-child {
+            color: var(--orange);
+            margin-right: 0.2rem;
+        }
+
+        .location i:last-child {
+            color: var(--blue);
+            margin-left: 0.2rem;
+        }
+
+        .profile {
+            text-align: right;
+            padding: 0.8rem 0.6rem 0 0;
+            border-left: solid 1px var(--light-grey);
+            border-right: solid 1px var(--light-grey);
+            height: 100%;
+        }
+
+        .profile p {
+            display: inline;
+        }
+
+        .profile i, p {
+            margin-left: 0.2rem;
+        }
+
+        .account {
+            font-size: 14px;
+            font-weight: 600;
+            margin-bottom: 0.4rem;
+        }
+
+        .account p {
+            color: var(--blue);
+            font-weight: bold;
+        }
+
+        .account i {
+            color: var(--light-blue);
+            /* border-radius: 50%; */
+        }
+
+        .account:hover p {
+            color: var(--orange);
+        }
+
+        .cart {
+            font-size: 16px;
+            font-weight: 600;
+        }
+
+        .cart i {
+            color: var(--blue);
+        }
+
+        .cart span {
+            font-weight: 400;
+            color: var(--grey);
+        }
+
+        .cart:hover p {
+            color: var(--orange);
+        }
+
+        /* Second */
+
+        .second-main {
+            height: 3.8rem;
+            position: relative;
+        }
+        
+        .nav {
+            width: 45%;
+            height: 100%;
+            padding: 0.8rem 0;
+
+            a {
+                display: inline-block;
+                padding: 0.4rem 0 0;
+            }
+        }
+
+        .second-main .nav a {
+            color: var(--blue);
+            font-size: 1.1rem;
+            font-weight: 600;
+            height: 100%;
+        }
+
+        .search a {
+            display: inline-block;
+            padding: 1.4rem 0;
+            color: var(--blue);
+        }
+
+        /* Nav Links' menu (pop up on hover) */
+        .nav-link-menu {
+            width: 16rem;
+            background-color: #fff;
+            padding: 0.6rem 2.4rem;
+            position: absolute;
+            top: 3.8rem;
+            left: 0;
+
+            li {
+                margin: 0 0 1rem;
+            }
+            
+            a {
+                display: inline;
+            }
+
+            span {
+                font-family: 'PT Sans', sans-serif;
+                font-size: 16px;
+                font-weight: 400;
+                color: var(--grey);
+            }
+
+            i {
+                color: var(--blue);
+                font-size: 0.8rem;
+            }
+
+            a:hover span {
+                color: var(--blue);
+            }
+        }
+
+        /* Search input */
+        .search-input {
+            height: 3.8rem;
+            position: absolute;
+            background-color: #fff;
+            top: 0;
+            left: 0;
+
+            input {
+                height: 100%;
+                width: calc(100% - 1.6rem);
+                font-size: 1.45rem;
+                font-weight: 600;
+                color: black ;
+                border: none;
+                outline: none;
+            }
+
+            i {
+                color: var(--grey);
+                font-size: 1.6rem;
+                margin: 1rem 0;
+                float: right;
+            }
+        }
+        /* /Search input */
+
+
+        /* Third */
+
+        /* left */
+        .third {
+            background: url("./assests/bg.jpg") no-repeat center/cover;
+        }
+
+        .third-main {
+            height: 40rem;
+            padding: 3.4rem 1rem 0;
+            display: flex;
+            justify-content: space-between;
+        }
+
+        .left {
+            width: 45%;
+        }
+
+        h1 {
+            margin-top: 4.3rem;
+            font-size: 3.7rem;
+            font-weight: 600;
+            color: var(--blue);
+        }
+
+        .third-main .left p {
+            font-size: 1.4rem;
+            font-weight: normal;
+            color: black;
+            margin: 1.8rem 0 2.6rem;
+        } 
+
+        .third-main .left i {
+            background-color: var(--orange);
+            padding: 0.7rem;
+            border-radius: 50%;
+            color: #fff;
+            font-weight: 600;
+            margin: 0.4rem 0.2rem;
+        }
+
+        .third-main .left {
+            font-size: 1.2rem;
+            font-weight: 600;
+            color: var(--orange);
+        }
+
+        /* right */
+        .right {
+            width: 24rem;
+        }
+
+        .link {
+            height: 6rem;
+            padding: 1.3rem 1.5rem;
+            background-color: #fff;
+            margin-bottom: 1px;
+            color: var(--blue);
+        }
+
+        .link-info {
+            color: var(--blue);
+            font-size: 1.3rem;
+            font-weight: 600;
+        }
+
+        .link-info svg {
+            margin-right: 1.2rem;
+        }
+
+        .link-rightarrow {
+            color: var(--blue);
+        }
+
+        .link:hover {
+            background-color: var(--light-blue);
+        }
+
+        .download {
+            background-color: var(--dark-blue);
+            text-align: center;
+        }
+
+
+        .download-title {
+            padding: 2rem 4.3rem 0;
+            font-size: 1.6rem;
+            font-weight: 600;
+            color: #fff;
+            line-height: 1.6rem;
+            text-align: left;
+        }
+
+        .download p {
+            color: #fff;
+            font-size: 1.2rem;
+            margin: 1rem 0 1.2rem;
+        }
+
+        .download-link {
+            padding: 0 0.3rem 2rem;
+        }
+
+        .download-link a {
+            background-color: #fff;
+            padding: 0.8rem 1.8rem;
+            border-radius: 40px;
+            white-space: nowrap;
+            text-align: left;
+        }
+
+        .download-link i {
+            /* font-size: 1.8rem; */
+            /* color: black; */
+            margin-right: 0.5rem;
+        }
+
+
+        
+        .download-link a:nth-child(1) {
+            font-weight: 600;
+
+            i {
+                font-size: 1.8rem;
+                color: var(--blue);
+            }
+
+            span.light-text {
+                font-size: 0.8rem;
+                font-weight: 100;
+                opacity: 0.8;
+            }
+        }
+
+        .download-link a:nth-child(1):hover {
+            background-color: var(--blue);
+            color: #fff;
+
+            i {
+                color: #fff;
+            }
+        }
+
+        .download-link a:nth-child(2) {
+            background-color: var(--orange);
+            color: #fff;
+            font-weight: 600;
+
+            i {
+                font-size: 1.4rem;
+                color: #fff;
+            }
+
+            span.light-text {
+                font-size: 0.8rem;
+                font-weight: 100;
+                opacity: 0.8;
+            }
+        }
+
+        .download-link a:nth-child(2):hover {
+            background-color: #fff;
+            color: var(--orange);
+
+            i {
+                color: var(--orange);
+            }
+        }
+
+    </style>
+</head>
+<body>
+    <!-- First -->
+    <section class="first">
+        <div class="first-main container flex">
+
+            <div class="logo">
+                <img src="./assests/logo.svg">
+            </div>
+            <div class="call">
+                <a href="#">
+                    <i class="fa-solid fa-phone"></i>
+                    <p> +1 800 753 24 56 </p>
+                </a>
+                <br>
+                <p> We are open Mon - Sun: 7 am - 8 pm </p>
+            </div>
+            <div class="location flex">
+                <a href="#">
+                    <i class="fa-solid fa-location-dot"></i>
+                     Locations
+                    <i class="fa-solid fa-caret-down"></i>
+                </a>
+            </div>
+            <div class="profile">
+                <div class="account">
+                    <a href="#">
+                        <i class="fa-solid fa-user"></i>
+                        <p> My Account </p>
+                    </a>
+                </div>
+                <div class="cart">
+                    <a href="#">
+                        <i class="fa-solid fa-cart-shopping"></i>
+                        <p> Checkout <span> 0 tests / $0.00 </span> </p>
+                        <i class="fa-solid fa-caret-down"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Second -->
+
+    <section class="second">
+        <div class="second-main container flex">
+            <div class="nav">
+                <ul class="flex">
+                    <li>
+                        <a href="#" id="analysis">
+                            Analysis <i class="fa-solid fa-caret-down"></i>
+
+                            <div class="nav-link-menu analysis-menu">
+                                <ul>
+                                    <li> <a href="#" class="flex"> <span> Biochemical studies </span> <span> <i class="fa-solid fa-caret-right"></i> </span> </a> </li>
+                                    <li> <a href="#" class="flex"> <span> Biochemical studies </span> </a> </li>
+                                    <li> <a href="#" class="flex"> <span> Biochemical studies </span> </a> </li>
+                                    <li> <a href="#" class="flex"> <span> Biochemical studies </span> <span> <i class="fa-solid fa-caret-right"></i> </span> </a> </li>
+                                    <li> <a href="#" class="flex"> <span> Biochemical studies </span> </a> </li>
+                                </ul>
+                            </div>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            Promotions
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            Test at Home
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            medical Services <i class="fa-solid fa-caret-down"></i>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+            <div class="search">
+                <a href="#">
+                    <i class="fa-solid fa-magnifying-glass"></i> 
+                </a>
+            </div>
+
+            <!-- Search input -->
+            <div class="search-input container">
+                <input type="text" placeholder="Search tests ...">
+                <span> <i class="fa-solid fa-xmark"></i> </span>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- Third -->
+
+    <section class="third">
+        <div class="third-main container">
+            <div class="left">
+                <h1> Keep Up About Your Health </h1>
+                <p> Lots of people trust us. Lots of certificates and satisfied clients prove this. </p>
+                <i class="fa-solid fa-check"></i> Hormonal research
+                <br>
+                <i class="fa-solid fa-check"></i> Microscopic, cytological studies
+            </div>
+            <div class="right">
+                <div class="links">
+
+                    <div class="link">
+                        <a href="#" class="flex">
+                            <div class="link-info flex">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 48 48" fill="#FF6A13"><path d="M28.2209 5.625V4.21875C28.2209 1.89253 26.3284 0 24.0022 0C21.6759 0 19.7834 1.89253 19.7834 4.21875V5.625H7.125V48H40.8794V5.625H28.2209ZM22.5959 4.21875C22.5959 3.44334 23.2268 2.8125 24.0022 2.8125C24.7776 2.8125 25.4084 3.44334 25.4084 4.21875V8.4375H30.5989V12.1875H17.4054V8.4375H22.5959V4.21875ZM38.0668 45.1875H9.9375V8.4375H14.5929V15H33.4114V8.4375H38.0668V45.1875Z"></path><path d="M14.4375 24H17.25V22.3125H18.9375V19.5H17.25V17.8125H14.4375V19.5H12.75V22.3125H14.4375V24Z" fill="#1797B1"></path><path d="M21.75 19.5H33.4121V22.3125H21.75V19.5Z" fill="#1797B1"></path><path d="M12.75 26.8125H32.581V29.625H12.75V26.8125Z" fill="#1797B1"></path><path d="M12.75 32.4375H25.9951V35.25H12.75V32.4375Z" fill="#1797B1"></path><path d="M12.75 38.0625H29.6279V40.875H12.75V38.0625Z" fill="#1797B1"></path><path d="M32.4375 38.0625H35.25V40.875H32.4375V38.0625Z" fill="#1797B1"></path></svg>
+                                Research and Prices
+                            </div>
+                            <div class="link-rightarrow">
+                                <i class="fa-solid fa-caret-right"></i>
+                            </div>
+                        </a>
+                    </div>
+
+                    <div class="link">
+                        <a href="#" class="flex">
+                            <div class="link-info flex">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 48 48" fill="#FF6A13"><path d="M28.2209 5.625V4.21875C28.2209 1.89253 26.3284 0 24.0022 0C21.6759 0 19.7834 1.89253 19.7834 4.21875V5.625H7.125V48H40.8794V5.625H28.2209ZM22.5959 4.21875C22.5959 3.44334 23.2268 2.8125 24.0022 2.8125C24.7776 2.8125 25.4084 3.44334 25.4084 4.21875V8.4375H30.5989V12.1875H17.4054V8.4375H22.5959V4.21875ZM38.0668 45.1875H9.9375V8.4375H14.5929V15H33.4114V8.4375H38.0668V45.1875Z"></path><path d="M14.4375 24H17.25V22.3125H18.9375V19.5H17.25V17.8125H14.4375V19.5H12.75V22.3125H14.4375V24Z" fill="#1797B1"></path><path d="M21.75 19.5H33.4121V22.3125H21.75V19.5Z" fill="#1797B1"></path><path d="M12.75 26.8125H32.581V29.625H12.75V26.8125Z" fill="#1797B1"></path><path d="M12.75 32.4375H25.9951V35.25H12.75V32.4375Z" fill="#1797B1"></path><path d="M12.75 38.0625H29.6279V40.875H12.75V38.0625Z" fill="#1797B1"></path><path d="M32.4375 38.0625H35.25V40.875H32.4375V38.0625Z" fill="#1797B1"></path></svg>
+                                Discount program
+                            </div>
+                            <div class="link-rightarrow">
+                                <i class="fa-solid fa-caret-right"></i>
+                            </div>
+                        </a>
+                    </div>
+
+                    <div class="link">
+                        <a href="#" class="flex">
+                            <div class="link-info flex">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 48 48" fill="#FF6A13"><path d="M28.2209 5.625V4.21875C28.2209 1.89253 26.3284 0 24.0022 0C21.6759 0 19.7834 1.89253 19.7834 4.21875V5.625H7.125V48H40.8794V5.625H28.2209ZM22.5959 4.21875C22.5959 3.44334 23.2268 2.8125 24.0022 2.8125C24.7776 2.8125 25.4084 3.44334 25.4084 4.21875V8.4375H30.5989V12.1875H17.4054V8.4375H22.5959V4.21875ZM38.0668 45.1875H9.9375V8.4375H14.5929V15H33.4114V8.4375H38.0668V45.1875Z"></path><path d="M14.4375 24H17.25V22.3125H18.9375V19.5H17.25V17.8125H14.4375V19.5H12.75V22.3125H14.4375V24Z" fill="#1797B1"></path><path d="M21.75 19.5H33.4121V22.3125H21.75V19.5Z" fill="#1797B1"></path><path d="M12.75 26.8125H32.581V29.625H12.75V26.8125Z" fill="#1797B1"></path><path d="M12.75 32.4375H25.9951V35.25H12.75V32.4375Z" fill="#1797B1"></path><path d="M12.75 38.0625H29.6279V40.875H12.75V38.0625Z" fill="#1797B1"></path><path d="M32.4375 38.0625H35.25V40.875H32.4375V38.0625Z" fill="#1797B1"></path></svg>
+                                Get analysis results
+                            </div>
+                            <div class="link-rightarrow">
+                                <i class="fa-solid fa-caret-right"></i>
+                            </div>
+                        </a>
+                    </div>
+
+                </div>
+
+                <div class="download">
+                    <div class="download-title flex">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="50" height="50" viewBox="0 0 50 50" fill="none"><circle cx="25" cy="25" r="25" fill="#B9E0E8"></circle><path d="M25 6C19.9609 6 15.1282 8.00178 11.565 11.565C8.00178 15.1282 6 19.9609 6 25C6 30.0391 8.00178 34.8718 11.565 38.435C15.1282 41.9982 19.9609 44 25 44L25 25L25 6Z" fill="white"></path><circle cx="25" cy="25" r="13" fill="#B9E0E8"></circle><path d="M25 38C26.7072 38 28.3977 37.6637 29.9749 37.0104C31.5521 36.3571 32.9852 35.3995 34.1924 34.1924C35.3995 32.9852 36.3571 31.5521 37.0104 29.9749C37.6637 28.3977 38 26.7072 38 25C38 23.2928 37.6637 21.6023 37.0104 20.0251C36.3571 18.4479 35.3995 17.0148 34.1924 15.8076C32.9852 14.6004 31.5521 13.6429 29.9749 12.9896C28.3977 12.3363 26.7072 12 25 12L25 38Z" fill="#1797B1"></path></svg>
+                        <span> Download <br> our Application </span>
+                    </div>
+                    <p> ang get a 10% discount on any analysis </p>
+                    <div class="download-link flex">
+                        <a href="#" class="flex">
+                            <i class="fa-brands fa-apple"></i>
+                            <span> <span class="light-text"> Available on </span> <br> Apple Store </span>
+                        </a>
+                        <a href="#" class="flex">
+                            <i class="fa-brands fa-google-play"></i>
+                            <span> <span class="light-text"> Available on </span> <br> Google Play </span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+</body>
+
+    <script src="./script.js"></script>
+
+</html>

@@ -1,0 +1,1133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Adv CSS - 2 </title>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+
+    <style>
+        /* div {
+            border: black solid 1px;
+        } */
+
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            scroll-behavior: smooth;
+        }
+
+        a {
+            text-decoration: none;
+        }
+
+        ul {
+            list-style: none;
+        }
+
+        .container-width {
+            width: 60rem;
+        }
+
+        /* Header */
+
+        #header {
+            height: 4rem;
+        }
+
+        #header #container {
+            margin: auto;
+            display: flex;
+            justify-content: space-between;
+            position: relative;
+        }
+
+        #header #container > img {
+            height: 4rem;
+        }
+
+        #header ul {
+            list-style: none;
+            height: 4rem;
+            display: flex;
+            align-items: center;
+        }
+
+        #header ul li {
+            float: left;
+            margin: 0 0.7rem;
+        }
+
+        /* Log In */
+
+        .login {
+            background-color: yellow;
+            height: 17rem;
+            width: 15rem;
+            position: absolute;
+            bottom: -17rem;
+            right: 0;
+            z-index: 1;
+            text-align: center;
+            padding: 12px 6px;
+        }
+
+        .login form input {
+            line-height: 2rem;
+            margin: 12px;
+            border: 1px solid blue;
+            border-radius: 8px;
+            width: 12rem;
+            padding: 0 6px;
+        }
+
+        /*  #firstt */
+
+        #firstt {
+            width: 100vw;
+            height: calc(100vh - 4rem);
+            background-image: linear-gradient(rgba(22, 31, 203, 0.75), rgba(3, 65, 126, 0.75)), url('./photos/images/img-1.jpg'); 
+            background-size: cover;
+            position: relative;
+        }
+
+        .intro {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            text-align: center;
+            color: #fff;
+        }
+
+        .intro h1 {
+            font-size: 3rem;
+        }
+
+        .intro a {
+            color: #fff;
+            padding: 10px 25px;
+            border: 2px solid #fff;
+            border-radius: 25px;
+            margin: 1rem 1rem;
+            display: inline-block;
+        }
+
+        .down-arrow img {
+            height: 1.2rem;
+            position: absolute;
+            left: 50%;
+            bottom: 20px;
+            transform: translate(-50%, -50%);
+        } 
+
+        /* 1st page */
+
+        /* #first {
+            height: calc(100vh - 4rem);
+            padding: 0 8rem;
+            background-image: linear-gradient(rgba(22, 31, 203, 0.75), rgba(3, 65, 126, 0.75)), url('./photos/images/img-1.jpg'); 
+            background-size: cover;
+        }
+
+        #first #upper {
+            height: calc(100vh - 6rem);
+            color: #fff;
+            position: relative;
+        }
+
+        #first #upper #container {
+            text-align: center;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+
+        #first #upper #container h1 {
+            font-size: 3rem;
+        }
+
+        #first #upper #container p {
+            font-size: 1rem;
+        }        
+
+        #first #upper #container #buttons a {
+            border: #fff 2px solid;
+            border-radius: 3rem;
+            padding: 8px 12px;
+            margin: 1rem;
+            font-size: 1rem;
+            color: #fff;
+        }
+
+        #first #upper #container #buttons a:hover {
+            background: rgb(218, 218, 81);
+        }
+
+        #first #lower {
+            /* height: 2rem;
+            display: flex;
+        }
+
+        #first #lower a {
+            margin: auto;
+        }
+
+        #first #lower a img {
+            height: 1rem;
+        }
+         */
+        /* 2nd page */
+
+        #second {
+            height: 80vh;
+            background-color: #fff;
+            padding: 6rem 0;
+            display: flex;
+            justify-content: center;
+        }
+
+        #second #container {
+            display: flex;
+        }
+
+        #second #left {
+            height: 100%;
+            width: 45%;
+        }
+
+        #second #right {
+            height: 100%;
+            width: 55%;
+            background-image: url('./photos/images/img-3.jpg');
+            background-size: cover;
+            background-repeat: no-repeat;
+        }
+
+        #second #left #upper {
+            height: 50%;
+            width: 100%;
+            padding: 1rem;
+            font-weight: 100;
+        }
+
+        #second #left #upper #txt-world {
+            font-weight: bolder;
+        }
+
+        #second #left #lower {
+            height: 50%;
+            width: 100%;
+            padding: 1rem;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+
+        #second #left #lower #item {
+            display: flex;
+        }
+
+        #second #left #lower #item #text {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+
+        #second #left h2, p {
+            margin: 1rem;
+        }
+
+        #second #left #lower img {
+            width: 3rem;
+            display: inline;
+            margin: 0 1rem;
+        }
+
+        /*  3rd */
+
+        #third {
+            height: 80vh;
+            background-image: linear-gradient(rgba(1, 14, 27, 0.85), rgba(1, 14, 27, 0.85)), url('./photos/images/img-1.jpg'); 
+            background-size: cover;
+        }
+
+        #third img {
+            width: 3rem;
+        }
+
+        #third #container {
+            position: relative;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+        
+        #third #container #top {
+            height: 6rem;
+            text-align: center;
+            font-size: 1.5rem;
+            color: #fff;
+            
+        }
+
+        #third #container #mid {
+            height: 20rem;
+            display: flex;
+            justify-content: space-between;
+        }
+
+        #third #container #mid #item {
+            width: 30%;
+            margin: 20px;
+        }
+        
+        #third #container #mid #item div {
+            text-align: center;
+            color: #fff;
+            margin: 20px;
+        }
+
+        #third #container #mid #item #text h5 {
+            font-size: 1.2rem;
+        }
+
+        #third #container #bottom {
+            text-align: center;
+        }
+
+        #third #container #bottom a {
+            /* height: 3rem; */
+            background-color: rgb(200, 200, 78);
+            padding: 18px 25px;
+            border-radius: 35px;
+            display: inline-block;
+            color: #fff;
+            font-weight: 800;
+        }
+
+        /* Fourth */
+
+        #fourth {
+            width: 100vw;
+        }
+
+        #fourth #container {
+            position: relative;
+            left: 50%;
+            transform: translate(-50%, 0%);
+            margin: 8rem 0;
+        }
+
+        #fourth #top {
+            height: 6rem;
+            font-size: 1.8rem;          
+        }
+
+        #fourth #top {
+            height: 6rem;
+            font-size: 1.8rem;          
+        }
+
+        #fourth p {
+            margin: 20px 0;
+        }
+
+        #fourth #bottom .control {
+            margin: 20px 0;
+        }
+
+        #fourth #bottom .control a {
+            padding: 14px 22px;
+            display: inline-block;
+            color: black;
+        }
+
+        #fourth #bottom .control a:hover {
+            background-color: #dcdcdc;
+        }
+
+        #fourth .items {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            grid-auto-rows: 10rem;
+            gap: 1rem;
+        }
+
+        #fourth .items div {
+            width: 100%;
+            background-color: green;
+        }
+
+        #fourth .item img {
+            object-fit: fill;
+            height: 100%;
+            width: 100%;
+        }
+
+        /* #fourth .item img:hover {
+
+        } */
+        
+        #fourth #box1 {
+            grid-column-start: 1;
+            grid-column-end: 2;
+            grid-row-start: 1;
+            grid-row-end: 3;
+        }
+
+        #fourth #box7 {
+            grid-column-start: 3;
+            grid-column-end: 4;
+            grid-row-start: 2;
+            grid-row-end: 4;
+        }
+
+        /* Fifth */
+
+        #fifth {
+            /* height: 40vh; */
+            background-image: linear-gradient(rgba(4, 8, 91, 0.9), rgba(4, 8, 91, 0.9)), url('./photos/images/img-4.jpg') ; 
+            background-size: cover;
+            display: flex;
+            justify-content: center;
+        }
+
+        #fifth #container {
+            display: flex;
+            justify-content: space-around;
+            text-align: center;
+            color: #fff
+        }
+
+        #fifth #container #item {
+            margin: 2rem 0;
+            width: 20%;
+        }
+
+        #fifth #container #icon {
+            border-radius: 50% 50%;
+            height: 6rem;
+            width: 6rem;
+            margin: auto;
+            background-color: rgba(256, 256, 256, 0.12);
+            display: flex;
+        }
+
+
+        #fifth #container #icon img {
+            width: 3.5rem;
+            margin: auto;
+        }
+
+        #fifth #container #text p:nth-child(2) {
+            font-size: 2rem;
+        }
+
+        /* 6th Page */
+
+        #sixth {
+            display: flex;
+            justify-content: center;
+            background-color: #e6ebee;
+        }
+
+        #sixth #container {
+            text-align: center;
+            margin: 4rem 0;
+        }
+
+        #sixth #container #top h4 {
+            font-size: 1.8rem;
+            margin: 10px 0;
+        }
+
+        #sixth #container #top p {
+            font-size: 0.6rem;
+            margin: 20px 0 35px;
+        }
+
+        #sixth #container #bottom  {
+            display: flex;
+            justify-content: space-around;
+        }
+
+        #sixth #container #bottom #item {
+            width: 30%;
+            background-color: #fff;
+            box-shadow: 2px 2px 12px grey ;
+            padding: 25px;
+        }
+
+        #sixth #container #bottom #item div {
+            margin: 36px 0;
+        }
+
+        #sixth #container #bottom #item p {
+            margin: 2px;
+        }
+
+        #sixth #container #bottom #item #title p:nth-child(1) {
+            font-size: 2rem;
+        }
+
+        #sixth #container #bottom #item #content p:nth-child(1) {
+            font-size: 1.7rem;
+        }
+
+        #sixth #container #bottom a {
+            padding: 8px 16px;
+            border: 3px solid black;
+            border-radius: 20px;
+            display: inline-block;
+            margin: 4px auto;
+        }
+
+        #sixth #container #bottom a:hover {
+            background-color: rgb(204, 204, 5);
+        }
+
+        /* 7th page */
+
+        /* Float Left-right button */
+        #seventh img {
+            width: 1rem;
+        }
+
+        .float-btn {
+            /* background-color: yellow; */
+            position: absolute;
+            top: 0;
+            right: 0;
+        }
+
+        .float-btn a {
+            padding: 1.2rem 1.5rem;
+            background-color: yellow;
+            display: inline-block;
+            margin: 0;
+            margin: 0;
+        }
+        /*  */
+
+        #seventh {
+            background-image: linear-gradient(rgba(4, 8, 91, 0.9), rgba(4, 8, 91, 0.9)), url('./photos/images/img-4.jpg') ; 
+            display: flex;
+            justify-content: center;
+            position: relative;
+        }
+        
+        #seventh #container {
+            padding: 5rem 0;
+            color: #fff;
+        }
+
+        #seventh #container #title {
+            height: 8rem;
+            position: relative;
+            padding: 0;
+        }
+        
+        #seventh #container #title #text h4 {
+            font-size: 2rem;
+        }
+
+        #seventh #container #title #text p {
+            margin: 20px 0;
+        }
+        
+        #seventh #container #title #logo {
+            position: absolute;
+            top: 0px;
+            right: 0px;
+        }
+
+        #seventh #container #content {
+            display: flex;
+        }
+
+        #seventh #container #content #item {
+            width: 45%;
+            margin: auto;
+            text-align: center;
+        }
+
+        #seventh #container #content #item img {
+            width: 5rem;
+            border-radius: 50%;
+        }
+
+        #seventh #container #content #item p:nth-child(2) {
+            font-size: 1.2rem;
+        }
+
+        #seventh #container #content #item p:nth-child(4) {
+            font-size: 0.7rem;
+        }
+
+        /* Page-8 */
+
+        #eith {
+            background: #e6ebee; 
+            display: flex;
+            justify-content: center;
+        }
+        
+        #eith #container {
+            padding: 5rem 0;
+        }
+
+        #eith #container #title {
+            height: 8rem;
+            position: relative;
+            padding: 0;
+        }
+        
+        #eith #container #title h4 {
+            font-size: 2rem;
+        }
+
+        #eith #container #title p {
+            margin: 20px 0;
+        }
+        
+        #eith #container #title #logo {
+            position: absolute;
+            top: 0px;
+            right: 0px;
+        }
+
+        #eith #container #content {
+            display: flex;
+            justify-content: space-between;
+        }
+
+        #eith #container #content #item {
+            width: 30%;
+            background-color: #fff;
+            box-shadow: 1px 1px 6px grey ;
+        }
+
+        #eith #container #content #item img {
+            width: 100%;
+        }
+
+        #eith #container #content #item p:nth-child(1) {
+            font-size: 1rem;
+        }
+
+        #eith #container #content #item p:nth-child(2) {
+            font-size: 0.8rem; 
+        }
+
+        #eith #container #content #item #lower {
+            padding: 1rem;
+        }
+
+        #eith #container #content #item #lower p {
+            margin: 0;
+        }
+
+        #eith #container #content #item #lower #link {
+            padding: 8px 20px;
+            border: 2px solid black;
+            border-radius: 20px;
+            display: inline-block;
+            margin: 4px auto;
+        }
+
+        #eith #container #content #item #lower #link:hover {
+            background-color: rgb(204, 204, 5);
+            color: #fff;
+        }
+
+        /* Page-9 */
+
+        #nineth {
+            width: 100vw;
+            background-color: #4100bb;
+        }
+
+        #nineth #container {
+            position: relative;
+            left: 50%;
+            transform: translate(-50%, 0%);
+        }
+
+        #nineth #container p {
+            margin: 0;
+            color: #fff;
+        }
+
+        #nineth #container #mid {
+            display: flex;
+            justify-content: space-between;
+            margin: 4rem 0;
+        }
+
+        #nineth #container #mid .item {
+            width: 20%
+        }
+
+        #nineth #container #mid #newsletter {
+            width: 30%;
+            text-align: right;
+        }
+
+        #nineth #container #mid .item p {
+            font-size: 1.1rem;
+            margin-bottom: 12px;
+        }
+
+        #nineth #container #mid .item ul li {
+            font-size: 0.6rem;
+            margin: 4px 0;
+            color: #cfcfcf;
+        }
+
+        #nineth #container #bottom {
+            text-align: center;
+            font-weight: 500;
+            padding: 10px 0;
+            border-top: 1px solid #ffffff35;
+        }
+
+        #nineth #container #bottom p {
+            color: #ffffff70;
+        }
+
+    </style>
+
+</head>
+<body>
+    <!-- Header -->
+
+    <div id="header">
+        <div id="container" class="container-width">
+            <img src="./photos/images/head_logo.jpg">
+            <div id="navbar">
+                <ul>
+                    <li> <a> HOME </a></li>
+                    <li> <a> ABOUT </a></li>
+                    <li> <a> SERVICES </a></li>
+                    <li> <a> PORTFOLIO </a></li>
+                    <li> <a> PRICE </a></li>
+                    <li> 
+                        <a> BLOG 
+                        <!-- <img src="./photos/images/icons/darrow.svg">  -->
+                        </a>
+                    </li>
+                    <img id="loginIcon" src="./photos/images/mail.jpg">
+                </ul>
+            </div>
+
+            <!-- Log in -->
+
+            <div class="login">
+                <!-- <p> Log In</p> -->
+                <form action="">
+                    <input type="text" placeholder="Email Id">
+                    <input type="text" name="iname" id="" placeholder="Password">
+                    <br>
+                    <a href="#"> Log In </a>
+                    <p> Don't have an account ? </p>
+                    <a href="#"> Sign Up </a>
+                </form>
+            </div>
+
+        </div>
+    </div>
+
+    <!-- Intro -->
+
+    <div id="firstt">
+        <!-- <div id="container"> -->
+            <div class="intro container-width">
+                <h1> We Will Make Your Bussiness <br> Great Again </h1>
+                <p> Lorem ipsum dolor sit amet consectetur adipisicing elit <br> Expedita, porro dolor </p>
+                <div id="link">
+                    <a href="#"> CONTACT US </a>
+                    <a href="#"> DISCOVER NOW </a>
+                </div>
+            </div>
+            <div class="down-arrow">
+                <a href="#sixthx"> <img src="./photos/images/icons/darrow.png"> </a>
+            </div>
+
+        <!-- </div> -->
+    </div>
+
+    <!-- 1st Page -->
+<!-- 
+    <div id="first">
+        <div id="upper" class="container-width">
+            <div id="container">
+                <h1> We Will <strong> Make </strong> Your <strong> Bussiness </strong> <br> Great Again <h1>
+                <p> Lorem ipsum dolor, sit amet consectetur adipisicing elit. <br> Debitis veritatis modi vel</p>
+                <div id="buttons">
+                    <a href="#"> CONTACT US </a>
+                    <a href="#"> DISCOVER NOW</a>
+                </div>
+            </div>
+        </div>    
+        <div id="lower">
+            <a href="#sixthx"> <img src="./photos/images/icons/darrow.png"> </a>
+        </div>
+    </div>
+ -->
+    <!-- 2nd Page -->
+
+    <div id="second">
+        <div id="container" class="container-width">
+            <div id="left">
+                <div id="upper">
+                    <h2> Hello <span id="txt-world"> World </span> </h2>
+                    <p> Lorem ipsum dolor sit amet consectetur adipisicing elit. Mollitia, harum eius necessitatibus voluptates debitis hic quod sit deleniti. Cum, placeat consequuntur. Quam, enim possimus. Repellendus, temporibus aut? Fugiat pers. </p>
+                </div>
+                <div id="lower">
+                    <div id="item">
+                        <img src="./photos/images/icons/i-diamond_b.svg">
+                        <div id="text">
+                            Exploring your area of activity
+                        </div>
+                    </div>
+                    <div id="item"> 
+                        <img src="./photos/images/icons/i-diamond_b.svg">
+                        <div id="text">
+                            Exploring your area of activity
+                        </div>
+                     </div>
+                    <div id="item"> 
+                        <img src="./photos/images/icons/i-diamond_b.svg">
+                        <div id="text">
+                            Exploring your area of activity
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div id="right">
+        </div>
+
+        </div>
+    </div>
+
+    <!-- 3rd Page -->
+
+    <div id="third">
+        <div id="container" class="container-width">
+            <div id="top">
+                <h3>
+                    Some of our <span> best services </span> <br> to solve tour problems
+                </h3>
+            </div>
+            <div id="mid">
+                <div id="item">
+                    <div id="icon">
+                        <img src="./photos/images/icons/i-shield.svg">
+                    </div>
+                    <div id="text">
+                        <h5> Digital Marketing </h5>
+                        <p> Lorem ipsum dolor sit amet consectetur ipsum dolor </p>
+                    </div>
+                </div>
+                <div id="item">
+                    <div id="icon">
+                        <img src="./photos/images/icons/i-shield.svg">
+                    </div>
+                    <div id="text">
+                        <h5> Web Development </h5>
+                        <p> Lorem ipsum dolor sit amet. Hic ex, autem fugiat. </p>
+                    </div>
+                </div>
+                <div id="item">
+                    <div id="icon">
+                        <img src="./photos/images/icons/i-shield.svg">
+                    </div>
+                    <div id="text">
+                        <h5> UI/UX Design </h5>
+                        <p> Lorem ipsum Perferendis repudiandae animi, maiores dolores reiciendis magnam. </p>
+                    </div>
+                </div>
+            </div>
+            <div id="bottom">
+                <a href="#"> ORDER A SERVICE </a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Page - 4 -->
+
+    <div id="fourth">
+        <div id="container" class="container-width">
+            <div id="top"> <p> Good design is Obvious <br> Great design is transparent. </p> </div>
+            <div id="mid"> 
+                <p> About Joe graphic designer, digitaal literacy teacher </p>
+            </div>
+            <div id="bottom">
+                <div class="control">
+                    <a> SHOW ALL </a>
+                    <a> DESIGN</a>
+                    <a> CODE</a>
+                    <a> ART </a>
+                </div>
+                <div class="items">
+                    <div class="item" id="box1"> <img src="./photos/images/12-min.jpg"> </div>
+                    <div class="item" id="box2"> <img src="./photos/images/2-min.jpg"> </div>
+                    <div class="item" id="box3"> <img src="./photos/images/2-min.jpg"> </div>
+                    <div class="item" id="box4"> <img src="./photos/images/2-min.jpg"> </div>
+                    <div class="item" id="box5"> <img src="./photos/images/2-min.jpg"> </div>
+                    <div class="item" id="box6"> <img src="./photos/images/2-min.jpg"> </div>
+                    <div class="item" id="box7"> <img src="./photos/images/12-min.jpg"> </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+<!-- Page-5 -->
+
+    <div id="fifth">
+        <div id="container" class="container-width">
+            <div id="item">
+                <div id="icon"> 
+                    <img src="./photos/images/icons/i-shield.svg"> 
+                </div>
+                <div id="text"> 
+                    <p> Unique Customers: </p>
+                    <p> <strong> 3519+ </strong> </p>
+                </div>
+            </div>
+            <div id="item">
+                <div id="icon"> 
+                    <img src="./photos/images/icons/i-diamond.svg"> 
+                </div>
+                <div id="text"> 
+                    <p> Unique Customers: </p>
+                    <p> <strong> 3519+ </strong> </p>
+                </div>
+            </div>
+            <div id="item">
+                <div id="icon"> 
+                    <img src="./photos/images/icons/i-feature.svg"> 
+                </div>
+                <div id="text"> 
+                    <p> Unique Customers: </p>
+                    <p> <strong> 3519+ </strong> </p>
+                </div>
+            </div>
+            <div id="item">
+                <div id="icon"> 
+                    <img src="./photos/images/icons/i-diamond.svg"> 
+                </div>
+                <div id="text"> 
+                    <p> Unique Customers: </p>
+                    <p> <strong> 3519+ </strong> </p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- 6th Page -->
+
+    <div id="sixth">
+        <div id="container" class="container-width">
+            <div id="top">
+                <h4> Flexible <strong> Pricing </strong> Plans</h4>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+            </div>
+            <div id="bottom">
+                <div id="item">
+                    <div id="title">
+                        <p> Trila version </p>
+                        <p> Lorem ipsum dolor sit amet consectetur adipisicing elit. Incidunt, facilis! </p>
+                    </div>
+                    <div id="content">
+                        <p>free</p>
+                        <p>500GB drive space </p>
+                        <p>Unlimited message</p>
+                    </div>
+                    <div id="link">
+                        <div id="link">
+                            <a> DOWNLOAD </a>
+                        </div>
+                    </div>
+                </div>
+                <div id="item">
+                    <div id="title">
+                        <p> Trial version </p>
+                        <p> Lorem ipsum dolor sit amet consectetur adipisicing elit. Incidunt, facilis! </p>
+                    </div>
+                    <div id="content">
+                        <p>free</p>
+                        <p>500GB drive space </p>
+                        <p>Unlimited message</p>
+                    </div>
+                    <div id="link">
+                        <div id="link">
+                            <a> DOWNLOAD </a>
+                        </div>
+                    </div>
+                </div>
+                <div id="item">
+                    <div id="title">
+                        <p> Trila version </p>
+                        <p> Lorem ipsum dolor sit amet consectetur adipisicing elit. Incidunt, facilis! </p>
+                    </div>
+                    <div id="content">
+                        <p>free</p>
+                        <p>500GB drive space </p>
+                        <p>Unlimited message</p>
+                    </div>
+                    <div id="link">
+                        <a> DOWNLOAD </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Page - 7 -->
+
+    <div id="seventh">
+        <div id="container" class="container-width">
+            <div id="title">
+                <div id="text">
+                    <h4> <strong> Testimonials </strong> About Us</h4>
+                    <p> Lorem ipsum dolor, sit amet consectetur adipisicing elit. Et, vero. </p>
+                </div>
+                <div class="float-btn">
+                    <a href="#"> <img src="./photos/images/icons/larrow.png"> </a>
+                    <a href="#"> <img src="./photos/images/icons/rarrow.png"> </a>
+                </div>
+                <!-- <div id="logo">
+                    <img src="./photos/images/logo-footer.jpg" alt="">
+                </div> -->
+            </div>
+            <div id="content">
+                <div id="item">
+                    <img src="./photos/images/t-1.jpeg">
+                    <p> Robert Newmen </p>
+                    <p> Innoraft Solution </p>
+                    <p> 
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Natus laudantium quam repellendus aliquid, vel dolorem dolore  nulla
+                    </p>
+                </div>
+                <div id="item">
+                    <img src="./photos/images/t-2.jpeg">
+                    <p> Robert Newmen </p>
+                    <p> Innoraft Solution </p>
+                    <p> 
+                        Lorem doloribus ipsa ipisci sit a aspernatur nisi rem cupiditate iure dolorem quibusdam accusantium architecto? Beatae porro vitae Lorem, ipsum dolor.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Page-8 -->
+
+    <div id="eith">
+        <div id="container" class="container-width">
+                <div id="title">
+                    <h4> Latest <strong> Blog </strong> Posts </h4>
+                    <p> Lorem ipsum dolor, sit amet consectetur adipisicing elit. Et, vero. </p>
+                </div>
+            <div id="content">
+                <div id="item">
+                    <div id="upper">
+                        <img src="./photos/images/img-2.jpg">
+                    </div>
+                    <div id="lower">
+                        <p> Robert Newmen </p>
+                        <p> 
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Natus laudantium quam repellendus aliquid, vel dolorem dolore  nulla
+                        </p>
+                        <div id="link">
+                            <a href="#"> Read more </a>
+                        </div>
+                    </div>
+                </div>
+                <div id="item">
+                    <div id="upper">
+                        <img src="./photos/images/img-2.jpg">
+                    </div>
+                    <div id="lower">
+                        <p> Robert Newmen </p>
+                        <p> 
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Natus laudantium quam repellendus aliquid, vel dolorem dolore  nulla
+                        </p>
+                        <div id="link">
+                            <a href="#"> Read more </a>
+                        </div>
+                    </div>
+                </div>
+                <div id="item">
+                    <div id="upper">
+                        <img src="./photos/images/img-2.jpg">
+                    </div>
+                    <div id="lower">
+                        <p> Robert Newmen </p>
+                        <p> 
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Natus laudantium quam repellendus aliquid, vel dolorem dolore  nulla
+                        </p>
+                        <div id="link">
+                            <a href="#"> Read more </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!--  Page-9 -->
+
+    <div id="nineth">
+        <div id="container" class="container-width">
+            <div id="top">
+                <img src="./photos/images/logo-footer.jpg" alt="">
+            </div>
+            <div id="mid">
+                <div class="item">
+                    <p> Company </p>
+                    <ul>
+                        <li> ABOUT </li>
+                        <li> SUPPORT </li>
+                        <li> PRESS </li>
+                        <li> LEGAL & PRIVACY </li>
+                    </ul>
+                </div>
+                <div class="item">
+                    <p> Company </p>
+                    <ul>
+                        <li> ABOUT </li>
+                        <li> SUPPORT </li>
+                        <li> PRESS </li>
+                        <li> LEGAL & PRIVACY </li>
+                    </ul>
+                </div>
+                <div class="item">
+                    <p> Company </p>
+                    <ul>
+                        <li> ABOUT </li>
+                        <li> SUPPORT </li>
+                        <li> PRESS </li>
+                        <li> LEGAL & PRIVACY </li>
+                    </ul>
+                </div>
+                <div class="item" id="newsletter">
+                    <p> Subscribe Newsletter </p>
+                    <img src="./photos/images/mail.jpg" alt="">
+                </div>
+            </div>
+            <div id="bottom">
+                <p> Lorem ipsum dolor sit, amet consectetur adipisicing elit. Dolore, quos. </p>
+            </div>
+        </div>
+    </div>
+</body>
+
+    <script src="jq1.js"> </script>
+
+</html>

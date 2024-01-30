@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Cityscape</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    
+    
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,400;1,700&family=Roboto:wght@400;700&family=Varela+Round&display=swap');
+
+        div {
+            border: 1px soild black;
+        }
+    
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+    
+        ul {
+            list-style: none;
+        }
+
+        h1 {
+            font-size: 7rem;
+            color: #FFB142;
+            margin-top: 30px;
+            display: inline;
+        }
+    
+        .container {
+            width: 500px;
+            margin: 0 auto;
+        }
+    
+        /*  First */
+    
+        #first {
+            height: 100vh;
+            background-size: cover;
+            position: relative;
+            display: flex;
+        }
+    
+        /*  Nav (in First) */
+    
+        .nav {
+            height: 4rem;
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0 2rem;
+            position: fixed;
+            z-index: 10;
+        }
+    
+    
+        .nav img {
+            height: 2rem;
+        }
+    
+        .nav ul li {
+            float: left;
+            color: #fff;
+            margin: 0 0.9rem;
+        }
+
+        .nav ul li:hover {
+            color: #FFB142;
+        }
+    
+        .nav .phnumber a {
+            display: flex;
+            align-items: center;
+            color: #fff;
+            text-decoration: none;
+        }
+    
+        .nav .phnumber a img {
+            height: 1.5rem;
+        }
+
+        /* Left */
+        #first .left {
+            width: 29%;
+            height: 100%;
+            background-color: black;
+        }
+
+        /* Right */
+        #first .right {
+            width: 71%;
+            height: 100%;
+            background: url("./assests/bg1.jpg") no-repeat;
+            background-size: cover;
+            position: relative;
+        }
+
+        #first .right .rectangle {
+            height: 532px;
+            width: 337px;
+            /* background-color: yellow; */
+            background-size: cover;
+            position: absolute;
+            left: -140px;
+            bottom: 5rem;
+        }
+
+        #first .right .rectangle img {
+            height: 100%;
+            width: 100%;
+        }
+
+        #first .rectangle .number {
+            position: absolute;
+            top: 8px;
+            right: -100px;
+            font-size: 10rem;
+            color: #fff;
+        }
+
+        #first .right .info {
+            position: absolute;
+            bottom: 4.5rem;
+            left: 21%;
+        }
+
+        #first .right .info h4 {
+            font-size: 1.4rem;
+            font-size: 1.5rem;
+            font-family: monospace;
+            color: #fff;
+        }
+
+        #first .right .info h6 {
+            font-size: 0.9rem;
+            font-size: 1.5rem;
+            font-family: monospace;
+            color:#ffffff;
+        }
+
+        #first .right .info a {
+            padding: 10px 20px;
+            margin-top: 30px;
+            color: #fff;
+            font-weight: 600;
+            border: 2px solid orange;
+            border-radius: 20px;
+            text-decoration: none;
+            font-weight: 700;
+            display: inline-block;
+        }
+
+        #first .right .info a:hover {
+            background-color: orange;
+            padding: 9px 19px;
+        }
+
+
+        /*  Arrow (in first) */
+
+        #first .arrow {
+            background-color: #fff;
+            position: absolute;
+            bottom: 0;
+            right: 0;
+        }
+
+        #first .arrow a {
+            background-color: #fff;
+            padding: 1.9rem 2.8rem;
+            display: inline-block;
+        }
+
+        #first .arrow a:hover {
+            background-color: blue;
+            border: 4px solid black;
+        }
+
+        #first .arrow a img {
+            height: 2rem;
+        }
+
+        /* Soical media links (in First section) */
+    
+        #first .social {
+            position: absolute;
+            left: 36px;
+            top: 60%;
+            color: #fff;
+        }
+
+        #first .social p {
+            transform: rotate(-90deg) translate(40px, -30px);
+        }
+
+        #first .social img {
+            height: 2rem;
+            margin: 0.4rem 0;
+        }
+
+        #first .social ul::before {
+            content: "";
+            display: inline-block;
+            background-color: #fff;
+            height: 80px;
+            width: 1px;
+            margin: 0.4rem 0.96rem;
+        }
+
+    </style>
+</head>
+
+<body>
+    <!-- Navbar -->
+
+    <div class="nav">
+        <img src="./assests/logo.png">
+        <ul>
+            <li> HOME </li>
+            <li> ABOUT </li>
+            <li> OUR SERVICES </li>
+            <li> PROJECTS </li>
+            <li> CONTACT US </li>
+        </ul>
+        <div class="phnumber">
+            <a href="#">
+                <img src="./assests/phone.png">
+                1-300-123-1234
+            </a>
+        </div>
+    </div>
+    <!-- /Navbar -->
+    
+    <!-- Header -->
+
+    <div id="first">
+
+        <div class="left"></div>
+        <div class="right">
+            <div class="rectangle">
+                <img src="./assests/chair.jpg">
+                <div class="number">
+                    02
+                </div>
+            </div>
+            <div class="info">
+                <h4> Milan, Italy </h4>
+                <h1> Villa Echo </h1>
+                <h6> LARGE 3 -BEDROOM HOLIDAY VILLA </h6>
+                <a href="#"> View project > </a>
+            </div>
+        </div>
+
+        <!-- Vertical Social media links -->
+
+        <div class="social">
+            <p> FOLLOW US </p>
+            <ul>
+                <li> <a href="#"> <img src="./assests/instagram.png"> </a> </li>
+                <li> <a href="#"> <img src="./assests/facebook.png"> </a> </li>
+                <li> <a href="#"> <img src="./assests/twitter.png"> </a> </li>
+            </ul>
+        </div>
+
+        <div class="arrow">
+            <a href="#"> <img src="./assests/leftarrow.png"> </a>
+            <a href="#"> <img src="./assests/rightarrow.png"> </a>
+        </div>
+    </div>
+
+</body>
+
+    <script src="script.js"> </script>
+
+</html>

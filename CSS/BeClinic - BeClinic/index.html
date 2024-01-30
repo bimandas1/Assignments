@@ -1,0 +1,663 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- 
+        Clone of :
+        https://demo.templatemonster.com/demo/58654.html?_gl=1*11mavfw*_ga*MTQ1NDgxMDM1MC4xNzA1MzA5MTMz*_ga_FTPYEGT5LY*MTcwNTM4ODEyMS4zLjEuMTcwNTM4ODE1Ni4yNS4wLjA
+        -> Live Demo button of BeClinic-Clinic
+    -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> BeClinic - Clinic </title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js" integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+    <style>
+        /* Debug****************************** */
+        body {
+            /* background: url(./assests/bg.jpg) no-repeat center/cover; */
+            background-color: grey;
+        }
+
+        .br {
+            border: solid 1px red;
+        }
+
+        .bg {
+            border: solid 1px green;
+        }
+
+        .bb {
+            border: solid 1px blue;
+        }
+
+        /* *****************************Debug */
+
+
+        @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@500&family=Roboto:wght@300;500&display=swap');
+
+        :root {
+            --blue: #0C6CAB;
+            --grey: #5A5E62;
+            --transparent-grey: rgba(198, 198, 198, 0.28);
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Roboto-light', sans-serif;
+        }
+
+        li {
+            list-style: none;
+        }
+
+        .flex {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        a {
+            text-decoration: none;
+            color: black;
+        }
+
+        .container {
+            width: 73rem;
+            margin: 0 auto;
+        }
+
+        /* First section */
+
+        .first {
+            width: 100%;
+            background-color: var(--transparent-grey);
+            border-bottom: solid 1px #ABB6BA;
+            position: absolute;
+        }
+
+        .first-main {
+            height: 3.5rem;
+            display: flex;
+            justify-content: space-between;
+            color: #fff;
+        }
+
+        .first a:hover {
+            color: #0C6CAB;
+        }
+
+        .first i:hover {
+            color: #0C6CAB;
+        }
+        
+        .first-main > div {
+            border-right: solid 1px #ABB6BA;
+            height: 100%;
+        }
+
+        ul {
+            width: 100%;
+        }
+
+        .location {
+            width: 27%;
+        }
+
+        .contact {
+            width: 53%;
+            padding: 0 1rem;
+        }
+
+        .contact a {
+            font-weight: 600;
+            color: #fff;
+        }
+
+        .social {
+            width: 15%;
+            padding: 0 1.8rem;
+        }
+
+        .first-main i {
+            color: #fff;
+        }
+
+        .search {
+            width: 5%;
+            display: flex;
+            justify-content: center;
+        }
+
+
+        .social ul li {
+            float: left;
+        }
+
+        /* Search input */
+        .search-input {
+            height: 4rem;
+            width: 40rem;
+            position: absolute;
+            z-index: 9;
+            top: 3.5rem;
+            /* right: 0; */
+            right: calc((100vw - 73rem)/2 - 0.6rem);
+            background-color: #fff;
+            padding: 0.6rem 0.4rem;
+        }
+
+        .search-input form {
+            height: 100%;
+            width: 100%;
+        }
+
+        .search-input input {
+            height: 100%;
+            width: 100%;
+            font-size: 1rem;
+            border: none;
+        }
+
+        /* Second section */
+
+        .second {
+            width: 100%;
+            background-color: var(--transparent-grey);
+            position: absolute;
+            top: 3.5rem;
+            z-index: 1;
+        }
+
+        .second-main {
+            height: 6rem;
+            display: flex;
+            justify-content: space-between;
+        }
+
+        .nav {
+            height: 100%;
+            width: 100%;
+            padding: 0 4.2rem;
+        }
+
+        .nav a {
+            font-size: 1.1rem;
+            font-weight: 500;
+            color: #fff;
+            display: inline-block;
+            padding: 2.4rem 0;
+        }
+
+        .nav li:hover a {
+            color: #89E0FB;
+        }
+
+        .nav i {
+            color: #fff;
+        }
+
+        .nav li:hover i {
+            color: #89E0FB;
+        }
+
+        .appoinment {
+            padding: 1.1rem;
+            width: 23.6rem;
+            border: solid 1px #fff;
+            border-radius: 4px;
+            text-align: center;
+        }
+
+        .appoinment a {
+            color: #fff;
+            font-size: 0.9rem;
+        }
+
+        .appoinment:hover {
+            background-color: #89E0FB;
+            transition: ease-in 0.2s;
+        }
+
+        .second-main li {
+            float: left;
+        }
+
+        /* Menu of anchor tags */
+        .department-menu {
+            width: 73rem;
+            position: absolute;
+            top: 6rem;
+            background-color: #EFF1F3;
+            padding: 2rem 3rem;
+        }
+
+        .department-menu-lower {
+            margin: 2rem 0 3rem;
+        }
+
+        .department-menu div div  {
+            text-align: center;
+            height: 12rem;
+            width: 9.6rem;
+        }
+
+        .department-menu div div:hover {
+            background-color: #fff;
+            box-shadow: 1px 1px 10px 8px #dddddd;
+            transition: ease-in 0.3s;
+        }
+
+        .department-menu div div img {
+            margin: 2rem 0 1rem;
+        }
+
+        .department-menu div div p {
+            font-size: 1.2rem;
+            font-weight: 600;
+        }
+
+
+        /* Third section */
+
+        .third {
+            background: url(./assests/bg.jpg) no-repeat center/cover;
+        }
+
+        .third-main {
+            height: 750px;
+            position: relative;
+            color: #fff;
+        }
+
+        .info {
+            position: absolute;
+            top: 14.5rem;
+            left: 0.7rem;
+        }
+
+        .third-main h1 {
+            font-size: 4.5rem;
+            font-weight: 600;
+            font-family: 'Montserrat', sans-serif;
+        }
+
+        .third-main p {
+            font-size: 2.8rem;
+            margin-bottom: 3rem;
+        }
+
+        .third-main a {
+            border: solid 1px #fff;
+            text-decoration: none;
+            color: #fff;
+            font-weight: 600;
+            padding: 17px 27px;
+            margin-right: 5px;
+            border-radius: 4px;
+        }
+
+        .third-main a:hover {
+            background-color: #0C6CAB;
+            border-color: #0C6CAB;
+        }
+
+        .third-main a:first-child {
+            background-color: #fff;
+            color: #0C6CAB;
+        }
+
+        .third-main a:first-child:hover {
+            background-color: #0C6CAB;
+            color: #fff;
+        }
+
+        /* Fourth section */
+
+        .fourth {
+            background-color: #F7FAFB;
+        }
+
+        .fourth-main {
+            height: 650px;
+            position: relative;          
+        }
+
+        /*  Time banner */
+
+        .time {
+            background-color: #fff;
+            width: 100%;
+            position: absolute;
+            top: -40px;
+        }
+
+        .time > div {
+            height: 21.5rem;
+            width: 33.33%;
+            padding: 2.6rem;
+        }
+        .time h2 {
+            color: var(--blue);
+            margin-bottom: 1.6rem;
+        }
+
+
+        /* Time - Opening Times */
+        .time-opening {
+            border-bottom: solid 6px #6CC8DF;
+        }
+
+        .time-opening ul li {
+            padding: 1rem 0;
+            margin-bottom: 1.5rem;
+            /* border: solid 1px red; */
+            border-bottom: solid 1px #EFF1F3;
+            display: flex;
+            justify-content: space-between;
+        }
+
+        .weekdays {
+            font-size: 0.96rem;
+        }
+
+        .hours {
+            font-size: 0.96rem;
+            color: var(--blue);
+            font-weight: 600;
+        }
+
+        /* Time - Doctors appoinment */
+        .time-doctors {
+            border-bottom: solid 6px #56B0D2;
+        }
+
+        .time-doctors p {
+            line-height: 1.8rem;
+            margin: 20px 0 22px;
+            color: var(--grey);
+        }
+
+        .time-doctors a {
+            color: var(--blue);
+            font-size: 0.8rem;
+            font-weight: 600;
+            padding: 0.9rem 2rem;
+            letter-spacing: 0.13rem;
+            border: solid 1px var(--blue);
+            border-radius: 4px;
+        }
+
+        .time-doctors a i {
+            margin-right: 4px;
+        }
+
+        .time-doctors a:hover {
+            background-color: var(--blue);
+            color: #fff;
+            transition: ease-in 0.2s;
+        }
+
+        /* Time - Emergency cases */
+        .time-emergency {
+            border-bottom: solid 6px #2A88C9;
+        }
+
+        .time-emergency a:hover {
+            color: var(--blue);
+        }
+
+        .time-emergency i {
+            color: var(--blue);
+            font-size: 1.8rem;
+            margin-right: 10px;
+        }
+
+        .time-emergency span {
+            font-size: 1.8rem;
+        }
+
+        .time-emergency p {
+            margin-top: 1.3rem;
+            line-height: 1.8rem;
+            color: var(--grey); 
+        }
+
+    </style>
+
+</head>
+<body>
+    <!-- First section -->
+
+    <div class="first">
+        <div class="first-main container flex">
+            <div class="location flex">
+                <p> Location:121 Wallstreet Street, NY , USA </p>
+            </div>
+            <div class="contact flex">
+                <div class="email flex">
+                    <p> Email: </p>
+                    <a href="#"> info@beclinic.com </a>
+                </div>
+                <div class="emergency flex">
+                    <p> For emergency cases: </p>
+                    <a href="#"> 800 123 45 67 </a>
+                </div>
+            </div>
+            <div class="social flex">
+                <ul class="flex">
+                    <li> <a href="#"> <i class="fa-brands fa-linkedin"></i> </a> </li>
+                    <li> <a href="#"> <i class="fa-brands fa-twitter"></i> </a> </li>
+                    <li> <a href="#"> <i class="fa-brands fa-facebook"></i> </a> </li>
+                    <li> <a href="#"> <i class="fa-brands fa-instagram"></i> </a> </li>
+                </ul>
+            </div>
+            <div class="search flex">
+                <a href="#"> <i class="fa-solid fa-magnifying-glass"></i> </a>
+            </div>
+
+            <!-- Search input -->
+            <!-- <div class="search-input">
+                <form action="">
+                    <input type="text" placeholder="Search ...">
+                </form>
+            </div> -->
+            <!-- /Search input -->
+
+        </div>
+    </div>
+
+    <!-- Second section -->
+
+    <div class="second">
+        <div class="second-main container flex">
+
+            <div class="logo flex">
+                <img src="./assests/logo.webp">
+            </div>
+            <div class="nav">
+                <ul class="flex">
+                    <li>
+                        <a href="#"> Home </a>
+                    </li>
+                    <li>
+                        <a href="#" id="department"> 
+                            Departments 
+                            <i class="fa-solid fa-angle-down"></i>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#"> 
+                            Doctors 
+                            <i class="fa-solid fa-angle-down"></i>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#"> 
+                            Pages 
+                            <i class="fa-solid fa-angle-down"></i>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#"> 
+                            News 
+                            <i class="fa-solid fa-angle-down"></i>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#"> 
+                            Shop 
+                            <i class="fa-solid fa-angle-down"></i>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+            <div class="appoinment">
+                <a href="#"> MAKE AN APPOINMENT </a>
+            </div>
+
+            <!-- Menu of anchor tags -->
+            <div class="department-menu">
+                <div class="department-menu-upper flex">
+                    <div>
+                        <img src="./assests/dept1.webp">
+                        <p> Nephrology </p>
+                    </div>
+                    <div>
+                        <img src="./assests/dept2.webp">
+                        <p> Cardiology </p>
+                    </div>
+                    <div>
+                        <img src="./assests/dept3.webp">
+                        <p> Palmonary </p>
+                    </div>
+                    <div>
+                        <img src="./assests/dept4.webp">
+                        <p> Palmonary </p>
+                    </div>
+                    <div>
+                        <img src="./assests/dept5.webp">
+                        <p> Palmonary </p>
+                    </div>
+                    <div>
+                        <img src="./assests/dept6.webp">
+                        <p> Births </p>
+                    </div>
+                </div>
+                <div class="department-menu-lower flex">
+                    <div>
+                        <img src="./assests/dept1.webp">
+                        <p> Nephrology </p>
+                    </div>
+                    <div>
+                        <img src="./assests/dept2.webp">
+                        <p> Cardiology </p>
+                    </div>
+                    <div>
+                        <img src="./assests/dept3.webp">
+                        <p> Palmonary </p>
+                    </div>
+                    <div>
+                        <img src="./assests/dept4.webp">
+                        <p> Palmonary </p>
+                    </div>
+                    <div>
+                        <img src="./assests/dept5.webp">
+                        <p> Palmonary </p>
+                    </div>
+                    <div>
+                        <img src="./assests/dept6.webp">
+                        <p> Births </p>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <!-- Third section -->
+
+    <div class="third">
+        <div class="third-main container">
+            <div class="info">
+                <h1> Bringing Health </h1>
+                <p> to life for the whole family </p>
+                <div class="link">
+                    <a href="#"> VIEW DEPARTMENTS </a>
+                    <a href="#"> GET IN TOUCH </a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Fourth section -->
+
+    <div class="fourth">
+        <div class="fourth-main container">
+            <div class="time flex">
+
+                <div class="time-opening">
+                    <h2> Opening Hours </h2>
+                    <div class="times">
+                        <ul>
+                            <li>
+                                <div class="weekdays">
+                                    Monday - Friday
+                                </div>
+                                <div class="hours">
+                                    8:00 - 18:00
+                                </div>
+                            </li>
+                            <li>
+                                <div class="weekdays">
+                                    Monday - Friday
+                                </div>
+                                <div class="hours">
+                                    8:00 - 18:00
+                                </div>
+                            </li>
+                            <li>
+                                <div class="weekdays">
+                                    Monday - Friday
+                                </div>
+                                <div class="hours">
+                                    8:00 - 18:00
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="time-doctors">
+                    <h2> Doctors Timetable </h2>
+                    <p>
+                        Your treatment plan is designed for steady progress, with every phase promptly implemented.
+                    </p>
+                    <a href="#">
+                        <i class="fa-regular fa-calendar"></i>
+                        VIEW TIMETABLE
+                    </a>
+                </div>
+
+                <div class="time-emergency">
+                    <h2> Emergency Cases </h2>
+                    <a href="#">
+                        <i class="fa-solid fa-phone"></i>
+                        <span> 800 123 45 67 </span>
+                    </a>
+                    <p>
+                        Your treatment plan is designed for steady progress, with every phase promptly implemented.
+                    </p>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+</body>
+
+    <script src="./script.js"></script>
+
+</html>

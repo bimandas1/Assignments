@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title> CSS Style 2 </title>
+
+    <style>
+        .container{
+            padding: 20px;
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            grid-auto-rows: 6rem;
+            grid-row-gap: 0.8rem;
+            grid-column-gap: 0.5rem;
+        }
+
+        .container div {
+            color: #fff;
+            font-weight: 600;
+            text-align: center;
+            padding-top: 1rem;
+        }
+
+        #header {
+            grid-column-start: 1;
+            grid-column-end: 5;
+            background-color: #55D4EB;
+        }
+
+        #sidebar {
+            grid-column-start: 1;
+            grid-column-end: 2;
+            grid-row-start: 2;
+            grid-row-end: 6;
+            background-color: #A0C263;
+        }
+
+        #main {
+            grid-column-start: 2;
+            grid-column-end: 5;
+            grid-row-start: 2;
+            grid-row-end: 5;
+            background-color: #F5C531;
+        }
+
+        #extra {
+            grid-column-start:2;
+            grid-column-end: 5;
+            grid-row-start: 5;
+            grid-row-end: 6;
+            background-color: #898989;
+        }
+
+        #footer {
+            grid-column-start:1;
+            grid-column-end: 5;
+            grid-row-start: 6;
+            grid-row-end: 7;
+            background-color: #FFA500;
+        }
+
+    </style>
+</head>
+<body>
+    
+    <div class="container">
+        <div class="box" id="header"> Header </div>
+        <div class="box" id="sidebar"> Sidebar </div>
+        <div class="box" id="main"> Main Content </div>
+        <div class="box" id="extra"> Extra Content </div>
+        <div class="box" id="footer"> Footer </div>
+    </div>
+
+</body>
+</html>

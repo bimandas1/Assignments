@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Data Center Network </title>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+
+    <style>
+        div {
+            border: 1px soild black;
+        }
+
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        ul {
+            list-style: none;
+        }
+
+        h1 {
+            font-size: 4.5rem;
+            /* margin: 0.5rem 0; */
+            color: #fff;
+        }
+
+        :root {
+            --wholebg: #494399;
+            --firstbgrectangle: #2CCCC4;
+            --h3color: #C2BFED;
+            --first-wrapper-height: 670px;
+        }
+
+        .container {
+            width: 1200px;
+            margin: 0 auto;
+            position: relative;
+            z-index: 0;
+        }
+
+        /* header */ 
+
+        .header {
+            background-color: var(--wholebg);
+            position: relative;
+        }
+
+        .nav {
+            height: 4rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .nav img {
+            height: 3rem;
+            margin: 0 0.4rem;
+        }
+
+        .nav ul li {
+            float: left;
+        }
+
+        /* Sidebar (in Header) */
+
+        .header .sidebar {
+            height: 100vh;
+            width: 300px;
+            background-color: #000;
+            position: absolute;
+            top: 0;
+        }
+
+        .header .sidebar {
+            color: #fff;
+            position: absolute;
+            padding: 6rem 0;
+            text-align: center;
+            z-index: 2;
+        }
+
+        .header .sidebar .cross {
+            position: absolute;
+            right: 2rem;
+            top: 2rem;
+        }
+
+        /* First */
+
+        #first {
+            background-color: var(--wholebg);
+            /* position: relative; */
+        }
+
+        /* #first .bg-rectangle {
+            height: var(--first-wrapper-height);
+            width: 300px;
+            background-color: var(--firstbgrectangle);
+            position: absolute;
+            left: 200px;
+            z-index: 0;
+        } */
+
+        #first .bg-rectangle {
+            position: absolute;
+            z-index: -1;
+            /* height: var(--first-wrapper-height); */
+            /* height: auto; */
+            height: 785px;
+            width: 300px;
+            background-color: var(--firstbgrectangle);
+            left: 200px;
+        }
+        
+        #first .wrapper {
+            /* height: var(--first-wrapper-height); */
+            margin: auto;
+            padding: 2rem;
+            display: flex;   
+            padding: 3rem 2rem 4rem;         
+            /* z-index: 1; */
+        }
+        
+        #first .left {
+            width: 60%;
+            margin: 3rem 0 6rem;
+        }
+
+        #first .left img {
+            height: 400px;
+            width: 600px;
+            margin: 1.5rem 0;
+        }
+
+        #first .left p {
+            color: #fff;
+            font-size: 1.3rem;
+        }
+
+        #first .right {
+            width: 40%;
+            margin: 6rem;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        } 
+
+        #first .right h3 {
+            font-size: 1.5rem;
+            color: var(--h3color);
+        }
+
+        #first .right p {
+            color: #fff;
+            margin: 1.5rem 0 1.5rem 3rem;
+            font-size: 1.1rem;
+        }
+
+        #first .right a {
+            color: #fff;
+            margin: 1.5rem 0 1.5rem 3rem;
+            font-size: 1.1rem;
+        }
+
+        #footer {
+            background-color: #333333;
+            text-align: center;
+            padding: 3rem 0;
+            color: #fff;
+        }
+
+        #footer p:nth-child(1) {
+            margin-bottom: 5rem;
+        }
+
+    </style>
+    
+</head>
+<body> 
+    <!-- Header -->
+    <div class="header">
+        <div class="nav container">
+            <img src="./assets/asset 5.svg">
+            <ul>
+                <li class="sidebar-btn"> <img src="./assets/asset 7.svg"></li>
+                <li> <img src="./assets/asset 1.svg"></li>
+                <li> <img src="./assets/asset 5.svg"></li>
+                <li> <img src="./assets/asset 3.svg"></li>
+            </ul>
+        </div>
+        <!-- Sidebar -->
+        <div class="sidebar">
+            <div class="cross"> X </div>
+            <div class="content"> Page 4 </div>
+        </div>
+    </div>
+
+
+
+    <!-- First -->
+
+    <div id="first">
+        <!-- <div class="bg-rectangle"> </div> -->
+        <div class="wrapper container">
+            <div class="bg-rectangle"> </div>
+            <div class="left">
+                <h1> Data Visualization </h1>
+                <br>
+                <div class="main">
+                    <img src="./assets/photo1.jpg" width="600px">
+                </div>
+                <!-- <div class="bottom">  -->
+                    <p> Image from Freepik </p>
+                <!-- </div> -->
+            </div>
+            <div class="right">
+                <div class="item">
+                    <h3> 01. GOALS </h3>
+                    <p> Sample text. Click to select the text box. Click again or double click to start editing the text. </p>
+                    <a href="#"> MORE </a>
+                </div>
+                <div class="item">
+                    <h3> 02. STRATEGY </h3>
+                    <p> Sample text. Click to select the text box. Click again or double click to start editing the text. </p>
+                    <a href="#"> MORE </a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+
+    <div id="footer">
+        <p> Sample text. Click to select the text box. Click again or double <br> click to start editing the text. </p>
+        <a href="#"> Website Templates </a> created with <a href="#"> Website Builder Software </a>
+    </div>
+
+</body>
+    <script src="jq1.js"> </script>
+</html>
